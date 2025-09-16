@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydro-Analytics Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <div id="loader-overlay" class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Hydro-Analytics Dashboard</h1>
+            <p class="subtitle">Groundwater Analysis & Forecasting</p>
+        </header>
+
+        <main>
+            <div class="controls-container">
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-bar" placeholder="Search by station or district...">
+                </div>
+                <div class="view-toggle">
+                    <button id="grid-view-btn" class="view-btn active"><i class="fa-solid fa-grip"></i> Grid</button>
+                    <button id="map-view-btn" class="view-btn"><i class="fa-solid fa-map-location-dot"></i> Map</button>
+                </div>
+            </div>
+            
+            <div id="station-list" class="station-grid"></div>
+            <div id="map-container" class="map-view hidden"></div>
+        </main>
+    </div>
+
+    <div id="history-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="modal-close">&times;</button>
+            <h2 id="modal-title">Historical Data</h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
