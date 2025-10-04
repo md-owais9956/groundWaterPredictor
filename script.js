@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let map;
 
     // --- Helper and Model Functions ---
-    function parseDate(dateString) { /* ... same as before ... */ }
-    function predictFutureLevel(stationData, daysInFuture) { /* ... same as before ... */ }
-    function renderStations(stations) { /* ... same as before ... */ }
-    function initializeMap() { /* ... same as before ... */ }
+    function parseDate(dateString) { }
+    function predictFutureLevel(stationData, daysInFuture) {}
+    function renderStations(stations) {  }
+    function initializeMap() {  }
 
     // --- Data Loading ---
     function loadLocalData() {
