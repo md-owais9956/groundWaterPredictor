@@ -42,6 +42,3 @@ bash
 Copy code
 cd groundWaterPredictor
 Open index.html in your preferred web browser.
-
-📄 License
-This project is licensed under the MIT License.
